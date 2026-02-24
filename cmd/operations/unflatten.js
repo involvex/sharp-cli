@@ -24,30 +24,30 @@
 // @see https://sharp.dimens.io/api-operation#unflatten
 
 // Strict mode.
-"use strict";
+'use strict'
 
 // Local modules.
-const queue = require("../../lib/queue");
+const queue = require('../../lib/queue')
 
 // Command builder.
 const builder = (yargs) => {
   return yargs
     .strict()
-    .example("$0 unflatten")
+    .example('$0 unflatten')
     .epilog(
-      "For more information on available options, please visit https://sharp.dimens.io/api-operation#unflatten",
-    );
-};
+      'For more information on available options, please visit https://sharp.dimens.io/api-operation#unflatten'
+    )
+}
 
 // Command handler.
 const handler = (args) =>
-  queue.push(["unflatten", (sharp) => sharp.unflatten()]);
+  queue.push(['unflatten', (sharp) => sharp.unflatten()])
 
 // Exports.
 module.exports = {
-  command: "unflatten",
+  command: 'unflatten',
   describe:
-    "Ensure the image has an alpha channel with all white pixel values made fully transparent",
+    'Ensure the image has an alpha channel with all white pixel values made fully transparent',
   builder,
-  handler,
-};
+  handler
+}
