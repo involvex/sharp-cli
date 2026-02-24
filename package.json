@@ -23,7 +23,8 @@
   "scripts": {
     "pretest": "standard | snazzy",
     "test": "nyc mocha",
-    "posttest": "nyc report --reporter=lcov"
+    "posttest": "nyc report --reporter=lcov",
+    "dev": "bun run bin/cli.js"
   },
   "dependencies": {
     "bubble-stream-error": "1.0.x",
